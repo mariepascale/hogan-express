@@ -113,7 +113,7 @@ To render a page with custom layout, just specify it in the options: `res.render
 
 #### Custom Lambdas / Filters
 
-To create custom filters (or lambdas) you can just specify your filter functions in the options:
+To create custom filters (or lambdas) you can just specify your filter functions in the options. Note: they must be defined under the "lambdas" key or they won't be executed:
 
 ```coffeescript
 app.get '/', (req,res)->
@@ -137,7 +137,7 @@ template:
 <p>Lowercase <strong>{{message}}</strong>: {{#lambdas.lowercase}}{{message}}{{/lambdas.lowercase}}</p>
 <ul>
   {{#mylist}}
-  <li>{{num}}: {{label}} is {{#reverseString}}{{label}}{{#reverseString}} in reverse.</li>
+  <li>{{num}}: {{label}} is {{#lambdas.reverseString}}{{label}}{{#lambdas.reverseString}} in reverse.</li>
   {{/mylist}}
 </ul>
 ```
