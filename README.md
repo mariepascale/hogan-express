@@ -137,7 +137,7 @@ template:
 <p>Lowercase <strong>{{message}}</strong>: {{#lambdas.lowercase}}{{message}}{{/lambdas.lowercase}}</p>
 <ul>
   {{#mylist}}
-  <li>{{num}}: {{label}} is {{#lambdas.reverseString}}{{label}}{{#lambdas.reverseString}} in reverse.</li>
+  <li>{{num}}: {{label}} is {{#lambdas.reverseString}}{{label}}{{/lambdas.reverseString}} in reverse.</li>
   {{/mylist}}
 </ul>
 ```
