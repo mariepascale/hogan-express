@@ -45,4 +45,8 @@ describe("example-page", function() {
     expect(cheer("[rel='test-nested-lambdas']").text().trim()).to.be("DLROW")
   });
 
+  it("should not render a variable with a value of empty string (empty strings should not be truthy)", function() {
+    expect(cheer("div.empty-string-container").length).to.be(0);
+  })
+
 });

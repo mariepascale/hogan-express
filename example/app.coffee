@@ -22,6 +22,7 @@ app.get '/', (req,res)->
   res.render "index",
     list: [ {title: "first", data: "custom data"}, {title: "Second"}, {title: "third"} ]
     partials: {temp: 'temp'}
+    emptyString: ''
     lambdas:
       reverseString: (text) ->
         return text.split("").reverse().join("")

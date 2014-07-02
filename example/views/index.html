@@ -37,6 +37,10 @@ Hello {{what}}!
 
 {{> temp}}
 
+{{#emptyString}}
+  <div class="empty-string-container">{{emptyString}}</div>
+{{/emptyString}}
+
 {{#yield-footer}}
   <p>I'm a footer, defined in index.html</p>
 {{/yield-footer}}
